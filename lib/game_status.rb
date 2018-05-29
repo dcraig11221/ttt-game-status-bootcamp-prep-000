@@ -50,13 +50,14 @@ end
 
 def winner(board)
 	x = board[won?(board)[0]]
+  if won?(board) == false
+    return nil
+  end
   if x == "X"
 	  return "X"
   end
   if x == "O"
     return "O"
   end
-  if won?(board) == false
-    return nil
-  end
+
 end
